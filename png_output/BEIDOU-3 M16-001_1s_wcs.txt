@@ -1,4 +1,0 @@
-# field_center_px 281.378 294.532
-# field_center_radec 120.513224 13.623187
-# satellite_px 217.249 158.772
-# satellite_radec 120.532294 13.548440
