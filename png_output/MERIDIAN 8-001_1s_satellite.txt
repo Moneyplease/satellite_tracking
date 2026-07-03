@@ -1,0 +1,2 @@
+# X Y FLUX  (row 0 = brightest = likely satellite)
+294.506 388.019 499301.000
