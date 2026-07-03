@@ -208,7 +208,7 @@ if __name__ == "__main__":
     path1 = "/Users/none/internship/fit_files/CZ-3B DEB-0051Emty.fit"
     path2 = "/Users/none/internship/fit_files/CZ-3B DEB-0052Emty.fit" 
     
-    MY_API_KEY = '' #jsijqcvqthalyjjj
+    MY_API_KEY = '' #
     
     visualize_processing_steps(path1)
     

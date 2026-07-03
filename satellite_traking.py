@@ -10,6 +10,7 @@ OUTPUT : star centroids (green) + satellite/compact sources (red, "SAT" on
 Install: pip install numpy scipy scikit-image astropy matplotlib skyfield
 Run    : edit the SETTINGS block below, then:  python satellite_traking.py
 """
+
 import math
 import os
 import numpy as np
@@ -347,7 +348,7 @@ PNG_DIR    = "/Users/none/internship/png_output"
 
 # --- plate solving (astrometry.net, online) ---
 DO_PLATE_SOLVE = True
-ASTROMETRY_API_KEY = "jsijqcvqthalyjjj"
+ASTROMETRY_API_KEY = ""
 PIXEL_SCALE_LOW  = None
 PIXEL_SCALE_HIGH = None
 
