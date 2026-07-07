@@ -1,3 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+node_modules/
+.next/
+out/
+build/
+
 png_output/
 *.png
 .DS_Store

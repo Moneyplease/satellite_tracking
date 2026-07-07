@@ -334,7 +334,7 @@ def tle_check_frame(label, fits_path, station, measured_radec, line1, line2):
 # ======================================================================
 # SETTINGS — edit these, no command-line arguments needed.
 # ======================================================================
-FITS_PATH = "/Users/none/internship/fit_files/MERIDIAN 8-001_1s.fit"
+FITS_PATH = "/Users/none/internship/fit_files/COSMOS 1989 (ETALON 1)-001_3s.fit"
 ANGLE_DEG = None
 LENGTH_PX = 60
 NSIGMA    = 4.0
@@ -348,13 +348,13 @@ PNG_DIR    = "/Users/none/internship/png_output"
 
 # --- plate solving (astrometry.net, online) ---
 DO_PLATE_SOLVE = True
-ASTROMETRY_API_KEY = ""
+ASTROMETRY_API_KEY = "jsijqcvqthalyjjj"
 PIXEL_SCALE_LOW  = None
 PIXEL_SCALE_HIGH = None
 
 # --- triangulation (TWO stations, same satellite, same UTC time) ---
 DO_TRIANGULATE = True        # True = process FITS_PATH + FITS_PATH_2 and triangulate
-FITS_PATH_2 = "/Users/none/internship/fit_files/MERIDIAN 8-0001_bin4_3s.fit"
+FITS_PATH_2 = "/Users/none/internship/fit_files/COSMOS 1989 (ETALON 1)-0001_bin4_20s.fit"
 STATION_A = (18.5745,  98.4847, 2400.0)
 STATION_B = (16.7607, 102.6309,  185.0)
 TIME_UTC  = (2025, 3, 28, 14, 58, 29.795)
