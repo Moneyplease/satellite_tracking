@@ -2,7 +2,12 @@
 
 import { useState } from "react";
 
-const API = "http://localhost:8000";
+// Talk to the backend on the SAME host the page was opened from
+// (works whether you use http://localhost:3000 or http://<LAN-IP>:3000)
+const API =
+  typeof window !== "undefined"
+    ? `http://${window.location.hostname}:8000`
+    : "http://localhost:8000";
 
 export default function Home() {
   const [frameA, setFrameA] = useState(null);
@@ -120,7 +125,7 @@ export default function Home() {
           {field("tle2", "TLE line 2")}
         </fieldset>
 
-        <button onClick={run} disabled={busy} style={{ width: "100%", padding: 10, fontSize: 16 }}>
+        <button type="button" onClick={run} disabled={busy} style={{ width: "100%", padding: 10, fontSize: 16 }}>
           {busy ? "Running…" : "Run"}
         </button>
       </div>

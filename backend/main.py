@@ -29,7 +29,7 @@ app = FastAPI(title="Satellite Tracking API")
 # allow the Next.js dev server (localhost:3000) to call us
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["*"],          # dev: allow any origin (localhost or LAN IP)
     allow_methods=["*"], allow_headers=["*"],
 )
 

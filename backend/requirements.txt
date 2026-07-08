@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+python-multipart
+astropy
+astroquery
+skyfield
+numpy
+scipy
+scikit-image
+matplotlib
+sgp4
