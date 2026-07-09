@@ -1,0 +1,6 @@
+__pycache__
+*.pyc
+.env
+fit_files
+png_output
+.DS_Store

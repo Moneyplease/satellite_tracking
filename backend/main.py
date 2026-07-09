@@ -10,6 +10,7 @@ then run:
 The Next.js frontend posts two FITS files + settings to /run and gets back the
 log, triangulation results, and a URL to the annotated PNG.
 """
+
 import os
 import io
 import sys
@@ -23,6 +24,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, FileResponse
 
 import satellite_tracking as pipe   # <-- your unchanged pipeline
+
+DEFAULT_API_KEY = os.environ.get("ASTROMETRY_API_KEY", "")
 
 app = FastAPI(title="Satellite Tracking API")
 
@@ -79,7 +82,7 @@ async def run(
         pipe.BORDER_MARGIN = int(float(cfg.get("border", 10)))
         pipe.SAT_BORDER_MARGIN = int(float(cfg.get("sat_border", 60)))
         pipe.DO_PLATE_SOLVE = bool(cfg.get("do_solve", True))
-        pipe.ASTROMETRY_API_KEY = cfg.get("api_key", "")
+        pipe.ASTROMETRY_API_KEY = cfg.get("api_key", "") or DEFAULT_API_KEY
 
         pathA = _save_upload(frameA, workdir)
         pathB = _save_upload(frameB, workdir) if frameB is not None else None
