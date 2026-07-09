@@ -348,7 +348,7 @@ PNG_DIR    = "/Users/none/internship/png_output"
 
 # --- plate solving (astrometry.net, online) ---
 DO_PLATE_SOLVE = True
-ASTROMETRY_API_KEY = "jsijqcvqthalyjjj"
+ASTROMETRY_API_KEY = ""
 PIXEL_SCALE_LOW  = None
 PIXEL_SCALE_HIGH = None
 
